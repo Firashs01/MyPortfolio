@@ -7,17 +7,17 @@ import image from '../img/fr.jpg';
 export default function Nav(){
     const links = [
         {name: 'Home', link: '/'},
-        {name: 'About', link: '/'},
-        {name: 'Skills', link: '/'},
-        {name: 'Contact me', link: '/'},
+        {name: 'About', link: '#about'},
+        {name: 'Skills', link: '#skills'},
+        {name: 'Contact me', link: '#contact'},
       ];
       let [open ,setOpen] = useState(false);
     return(
-        <div className="shadow-md  w-full top-0 left-0 ">
+        <div className="shadow-md md:sticky bg-gray-800 w-full top-0 left-0 ">
             <div className="md:flex item-center justify-between py-4 md:px-10 px-7">
-                <div className="font-bold text-1xl text-white cursor-pointer flex items-center ">
-                    <img src={image}   alt="fr" className="w-6 h-6 rounded-full "/>
-                    <div >Hasni Firas</div>
+                <div className="font-bold text-1xl text-white cursor-pointer   flex items-center ">
+                    <img src={image}   alt="fr" className="w-10 h-10 rounded-full hover:animate-bounce "/>
+                    <div  >Hasni Firas</div>
                 </div>
                 <div onClick={()=>setOpen(!open)} className="text-3xl absolute right-10 top-3 cursor-pointer md:hidden">
                    {open ? <AiOutlineClose/> : <AiOutlineMenu/> } 
